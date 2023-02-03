@@ -1,11 +1,10 @@
 import Koa from "koa";
 import cors from "@koa/cors";
 import helmet from "koa-helmet";
+import bulk from "./routes/bulk";
+import available from "./routes/available";
 import { RateLimit } from "koa2-ratelimit";
 import { getReasonPhrase, StatusCodes } from "http-status-codes";
-import random from "./routes/random";
-import available from "./routes/available";
-import bulk from "./routes/bulk";
 
 require("dotenv").config();
 const port = process.env.PORT || 2000;
