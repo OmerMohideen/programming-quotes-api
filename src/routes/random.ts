@@ -1,8 +1,8 @@
 import Router from "koa-router";
 import path from "path";
 import data from "../../data.json";
-const router = new Router();
 import { StatusCodes } from "http-status-codes";
+const router = new Router();
 
 router.get(
   `/${path.basename(__filename, path.extname(__filename))}`,
