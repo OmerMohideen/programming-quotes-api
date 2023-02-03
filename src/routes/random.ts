@@ -2,32 +2,23 @@ import Router from "koa-router";
 import path from "path";
 import data from "../../data.json";
 const router = new Router();
-import { getReasonPhrase, StatusCodes } from "http-status-codes";
+import { StatusCodes } from "http-status-codes";
 
 router.get(
   `/${path.basename(__filename, path.extname(__filename))}`,
   async (ctx) => {
-    ctx.response.status = StatusCodes.OK;
-    ctx.body = data[Math.floor(Math.random() * (data.length - 0) + 0)];
-  }
-);
-
-router.get(
-  `/${path.basename(__filename, path.extname(__filename))}/author`,
-  async (ctx) => {
     const {
-      query: { name },
+      query: { author },
     } = ctx.request;
-
-    if (!name) {
-      ctx.response.status = StatusCodes.BAD_REQUEST;
-      ctx.body = { error: getReasonPhrase(StatusCodes.BAD_REQUEST) };
+    if (!author) {
+      ctx.response.status = StatusCodes.OK;
+      ctx.body = data[Math.floor(Math.random() * (data.length - 0) + 0)];
       return;
     }
     var matched = data.filter(function (quote) {
       return quote.author
         .toLowerCase()
-        .startsWith(name.replace("+", " ").toLowerCase());
+        .startsWith(author.replace("+", " ").toLowerCase());
     });
     ctx.response.status = StatusCodes.OK;
     ctx.body = matched[Math.floor(Math.random() * (matched.length - 0) + 0)];
