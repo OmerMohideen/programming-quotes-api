@@ -2,6 +2,7 @@ import Koa from "koa";
 import cors from "@koa/cors";
 import helmet from "koa-helmet";
 import bulk from "./routes/bulk";
+import random from "./routes/random";
 import available from "./routes/available";
 import { RateLimit } from "koa2-ratelimit";
 import { getReasonPhrase, StatusCodes } from "http-status-codes";
