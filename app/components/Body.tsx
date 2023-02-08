@@ -23,7 +23,7 @@ function Body() {
     setRandomQuote(null);
     setIsLoading(true);
 
-    await fetch("https://programming-quotesapi.vercel.app/random")
+    await fetch("/random")
       .then((response) => response.json())
       .then((json) => {
         setIsLoading(false);
