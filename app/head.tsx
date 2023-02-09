@@ -15,9 +15,10 @@ export default function Head() {
         property="og:description"
         content="Programming Quotes API is a free online REST API for programming quotes by programmers"
       />
-      <meta property="og:title" content="Programming Quotes API" />
+      <meta property="og:title" content="Programming Quotes" />
+      <meta property="og:image" content="/logo.png" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Programming Quotes API" />
+      <meta name="twitter:title" content="Programming Quotes" />
       <meta
         name="twitter:description"
         content="Programming Quotes API is a free online REST API for programming quotes by programmers"
