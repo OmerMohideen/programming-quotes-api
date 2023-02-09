@@ -11,7 +11,7 @@ type Quote = {
 }
 
 function Body() {
-  const code = `fetch('https://programming-quotesapi.vercel.app/random')
+  const code = `fetch('https://programming-quotesapi.vercel.app/api/random')
     .then(response => response.json())
     .then(quote => console.log(quote))`;
   const [randomQuote, setRandomQuote] = useState<Quote | null>(null);
@@ -23,7 +23,7 @@ function Body() {
     setRandomQuote(null);
     setIsLoading(true);
 
-    await fetch("/random")
+    await fetch("/api/random")
       .then((response) => response.json())
       .then((json) => {
         setIsLoading(false);
