@@ -15,33 +15,33 @@ export const API_DOCS: Docs[] = [
   {
     title: "Random Quote",
     description1: "Get one random quote",
-    code1: `fetch("https://programming-quotesapi.vercel.app/random")
+    code1: `fetch("https://programming-quotesapi.vercel.app/api/random")
           .then((response) => response.json())
           .then((quote) => console.log(quote));`,
     description2: "Get one random quote using the authors name",
-    code2: `fetch("https://programming-quotesapi.vercel.app/random?author=Linus Torvalds")
+    code2: `fetch("https://programming-quotesapi.vercel.app/api/random?author=Linus Torvalds")
           .then((response) => response.json())
           .then((quote) => console.log(quote));`,
   },
   {
     title: "10 Random Quotes",
     description1: "Get 10 random quotes",
-    code1: `fetch("https://programming-quotesapi.vercel.app/bulk")
+    code1: `fetch("https://programming-quotesapi.vercel.app/api/bulk")
           .then((response) => response.json())
           .then((quote) => console.log(quote));`,
     description2: "Get 10 random quotes using the authors name",
-    code2: `fetch("https://programming-quotesapi.vercel.app/bulk?author=Linus Torvalds")
+    code2: `fetch("https://programming-quotesapi.vercel.app/api/bulk?author=Linus Torvalds")
           .then((response) => response.json())
           .then((quote) => console.log(quote));`,
   },
   {
     title: "Available Quotes",
     description1: "Get all available quotes",
-    code1: `fetch("https://programming-quotesapi.vercel.app/available")
+    code1: `fetch("https://programming-quotesapi.vercel.app/api/available")
           .then((response) => response.json())
           .then((quote) => console.log(quote));`,
     description2: "Get all available quotes using the authors name",
-    code2: `fetch("https://programming-quotesapi.vercel.app/available?author=Linus Torvalds")
+    code2: `fetch("https://programming-quotesapi.vercel.app/api/available?author=Linus Torvalds")
           .then((response) => response.json())
           .then((quote) => console.log(quote));`,
     last: true,
