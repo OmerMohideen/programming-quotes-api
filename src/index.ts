@@ -22,7 +22,11 @@ const limiter = RateLimit.middleware({
 });
 
 app.use(limiter);
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: 'GET',
+  optionsSuccessStatus: 200
+}));
 app.use(helmet());
 app.use(random);
 app.use(available);
