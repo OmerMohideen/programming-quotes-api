@@ -73,11 +73,7 @@ function Body() {
             Default rate limit is <i className="font-medium">100 requests</i>{" "}
             per hour.
           </li>
-          <li>
-            Default number of quotes returned from query endpoints is{" "}
-            <i className="font-medium">10</i>.
-          </li>
-        </ol>
+	  </ol>
       </div>
       <hr className="mb-5" />
       <div className="my-12 space-y-12">
